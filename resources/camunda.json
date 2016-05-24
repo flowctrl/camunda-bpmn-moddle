@@ -286,6 +286,16 @@
           "name": "priority",
           "isAttr": true,
           "type": "String"
+        },
+        {
+          "name": "duration",
+          "isAttr": true,
+          "type": "Integer"
+        },
+        {
+          "name": "knowledgeId",
+          "isAttr": true,
+          "type": "Integer"
         }
       ]
     },
