@@ -883,6 +883,20 @@
           "isAttr": true
         }
       ]
+    },
+    {
+      "name": "Approver",
+      "extends": [
+        "bpmn:UserTask",
+        "bpmn:Task"
+      ],
+      "properties": [
+        {
+          "name": "approver",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
     }
   ],
   "emumerations": [ ]
