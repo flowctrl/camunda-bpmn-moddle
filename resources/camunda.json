@@ -291,11 +291,6 @@
           "name": "duration",
           "isAttr": true,
           "type": "Integer"
-        },
-        {
-          "name": "knowledgeId",
-          "isAttr": true,
-          "type": "Integer"
         }
       ]
     },
@@ -885,9 +880,20 @@
       ]
     },
     {
+      "name": "Knowledge",
+      "superClass": [ "Element" ],
+      "properties": [
+        {
+          "name": "knowledgeId",
+          "isAttr": true,
+          "type": "Integer"
+        }
+      ]
+    },
+    {
       "name": "Approver",
       "extends": [
-        "bpmn:UserTask",
+        "bpmn:Gateway",
         "bpmn:Task"
       ],
       "properties": [
