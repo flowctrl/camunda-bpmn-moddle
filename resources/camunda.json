@@ -918,6 +918,20 @@
           "type": "String"
         }
       ]
+    },
+    {
+      "name": "RelatedSystems",
+      "extends": [
+        "bpmn:Task"
+      ],
+      "properties": [
+        {
+          "name": "relatedSystems",
+          "isAttr": true,
+          "type": "Boolean",
+          "default": false
+        }
+      ]
     }
   ],
   "emumerations": [ ]
