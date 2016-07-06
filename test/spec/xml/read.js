@@ -548,7 +548,9 @@ describe('read', function() {
           caseRef: 'oneTaskCase',
           caseBinding: 'version',
           caseVersion: 2,
-          caseTenantId: 'tenant1'
+          caseTenantId: 'tenant1',
+          variableMappingClass: 'org.camunda.bpm.test.Test',
+          variableMappingDelegateExpression: '${test}'
         });
 
         done(err);
@@ -1033,12 +1035,38 @@ describe('read', function() {
             caseRef: 'oneTaskCase',
             caseBinding: 'version',
             caseVersion: 2,
-            caseTenantId: 'tenant1'
+            caseTenantId: 'tenant1',
+            variableMappingClass: 'org.camunda.bpm.test.Test',
+            variableMappingDelegateExpression: '${test}'
           });
 
           done(err);
         });
       });
+    });
+
+
+    describe('camunda:errorMessageVariable', function() {
+
+      it('on ErrorEventDefinition', function(done) {
+
+        // given
+        var xml = readFile('test/fixtures/xml/errorEventDefinition-camunda-errorMessageVariable.part.bpmn');
+
+        // when
+        moddle.fromXML(xml, 'bpmn:ErrorEventDefinition', function(err, definition) {
+
+          // then
+          expect(definition).to.jsonEqual({
+            $type: 'bpmn:ErrorEventDefinition',
+            errorMessageVariable: 'errorMessage'
+          });
+
+          done(err);
+        });
+
+      });
+
     });
 
   });

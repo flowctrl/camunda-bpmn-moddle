@@ -135,6 +135,11 @@
           "name": "errorCodeVariable",
           "isAttr": true,
           "type": "String"
+        },
+        {
+          "name": "errorMessageVariable",
+          "isAttr": true,
+          "type": "String"
         }
       ]
     },
@@ -332,6 +337,16 @@
         },
         {
           "name": "caseTenantId",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "variableMappingClass",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "variableMappingDelegateExpression",
           "isAttr": true,
           "type": "String"
         }
