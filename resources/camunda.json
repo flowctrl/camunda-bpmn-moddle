@@ -647,7 +647,6 @@
         },
         {
           "name": "expression",
-          "isAttr": true,
           "type": "String"
         },
         {
