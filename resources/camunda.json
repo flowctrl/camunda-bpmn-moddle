@@ -726,8 +726,9 @@
           "type": "Script"
         },
         {
-          "name": "field",
-          "type": "Field"
+          "name": "fields",
+          "type": "Field",
+          "isMany": true
         }
       ]
     },
@@ -760,8 +761,9 @@
           "type": "Script"
         },
         {
-          "name": "field",
-          "type": "Field"
+          "name": "fields",
+          "type": "Field",
+          "isMany": true
         }
       ]
     },
